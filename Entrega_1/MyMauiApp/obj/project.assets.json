@@ -28994,11 +28994,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nicolás\\Desktop\\App_Moviles\\Entrega_1\\MyMauiApp\\MyMauiApp.csproj",
+      "projectUniqueName": "C:\\Dev\\App_Moviles\\Entrega_1\\MyMauiApp\\MyMauiApp.csproj",
       "projectName": "MyMauiApp",
-      "projectPath": "C:\\Users\\Nicolás\\Desktop\\App_Moviles\\Entrega_1\\MyMauiApp\\MyMauiApp.csproj",
+      "projectPath": "C:\\Dev\\App_Moviles\\Entrega_1\\MyMauiApp\\MyMauiApp.csproj",
       "packagesPath": "C:\\Users\\Nicolás\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nicolás\\Desktop\\App_Moviles\\Entrega_1\\MyMauiApp\\obj\\",
+      "outputPath": "C:\\Dev\\App_Moviles\\Entrega_1\\MyMauiApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
