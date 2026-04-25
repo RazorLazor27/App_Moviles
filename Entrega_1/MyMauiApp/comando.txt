@@ -1,0 +1,1 @@
+dotnet build -t:InstallAndroidDependencies -f:net10.0-android -p:AndroidSdkDirectory="M:\Android_SDK" -p:AcceptAndroidSDKLicenses=True
