@@ -1,6 +1,6 @@
 # Carpetas de salida
-[Bb]in/
-[Ob]j/
+bin/
+obj/
 
 # Archivos de usuario de Visual Studio
 *.user
