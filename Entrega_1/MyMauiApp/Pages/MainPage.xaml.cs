@@ -3,7 +3,22 @@
 public partial class MainPage : ContentPage
 {
 	private readonly Random _random = new();
-
+	
+	/// Copia el código hexadecimal al portapapeles
+	/// <param name="sender">El objeto que envió el evento.</param>
+	/// <param name="e">Los argumentos del evento.</param>
+	private async void OnCopyHexClicked(object? sender, EventArgs e)
+	{
+		await Clipboard.SetTextAsync(HexLabel.Text);
+		var button = sender as Button;
+		if (button != null)
+		{
+			button.Text = "Copiado ✓";
+			await Task.Delay(1500);
+			button.Text = "Copiar Color";
+		}
+	}
+	
 	public MainPage()
 	{
 		InitializeComponent();
@@ -18,6 +33,7 @@ public partial class MainPage : ContentPage
 		// TODO: Implementar funcionalidad especifica para el boton "Aplicar RGB".
 		ApplyColorFromSliders();
 	}
+
 	/// <summary>
 	/// Maneja el evento de clic del botón "Aleatorio" para generar un color aleatorio.
 	/// </summary> <param name="sender">El objeto que envió el evento.</param> <param name="e">Los argumentos del evento.</param>
@@ -76,6 +92,8 @@ public partial class MainPage : ContentPage
 	{
 		Color color = Color.FromRgb(r, g, b);
 		ColorPreviewGrid.BackgroundColor = color;
+		// Para cambiar el color de fondo, pero caché que si lo colocamos no se ve lindo
+		this.BackgroundColor = color;
 		HexLabel.Text = $"#{r:X2}{g:X2}{b:X2}";
 
 		int brightness = (r + g + b) / 3;

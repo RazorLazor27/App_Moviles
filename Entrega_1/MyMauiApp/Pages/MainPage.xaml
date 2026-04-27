@@ -4,47 +4,66 @@
              x:Class="MyMauiApp.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Padding="24" Spacing="16">
-            <Label Text="Generador RGB" FontSize="28" FontAttributes="Bold" />
-            <Label Text="Mueve los sliders entre 0 y 255 o genera un color al azar." FontSize="14" />
+        <Grid>
+            <!-- Tarjeta con todos los contenidos de las cosas (esto para que el fondo y esto no se mezcle y pueda verse bien)-->
+            <Border 
+                BackgroundColor="White"
+                Stroke="#DDDDDD"
+                StrokeShape="RoundRectangle 20"
+                Padding="20"
+                Margin="20">
 
-            <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="10">
-                <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
-                    <Label Grid.Column="0" Text="R" VerticalOptions="Center" />
-                    <Slider Grid.Column="1" x:Name="RSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
-                    <Label Grid.Column="2" x:Name="RValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
-                </Grid>
+                <VerticalStackLayout Spacing="16">
 
-                <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
-                    <Label Grid.Column="0" Text="G" VerticalOptions="Center" />
-                    <Slider Grid.Column="1" x:Name="GSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
-                    <Label Grid.Column="2" x:Name="GValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
-                </Grid>
+                    <Label Text="Generador RGB" FontSize="28" FontAttributes="Bold" />
+                    <Label Text="Mueve los sliders entre 0 y 255 o genera un color al azar." FontSize="14" />
 
-                <Grid Grid.Row="2" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
-                    <Label Grid.Column="0" Text="B" VerticalOptions="Center" />
-                    <Slider Grid.Column="1" x:Name="BSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
-                    <Label Grid.Column="2" x:Name="BValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
-                </Grid>
-            </Grid>
+                    <Grid RowDefinitions="Auto,Auto,Auto" RowSpacing="10">
+                        <Grid Grid.Row="0" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                            <Label Grid.Column="0" Text="R" VerticalOptions="Center" />
+                            <Slider Grid.Column="1" x:Name="RSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
+                            <Label Grid.Column="2" x:Name="RValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
+                        </Grid>
 
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
-                <Button Grid.Column="0" Text="Aplicar RGB" Clicked="OnApplyRgbClicked" HorizontalOptions="Fill" />
-                <Button Grid.Column="1" Text="Aleatorio" Clicked="OnRandomColorClicked" HorizontalOptions="Fill" />
-            </Grid>
+                        <Grid Grid.Row="1" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                            <Label Grid.Column="0" Text="G" VerticalOptions="Center" />
+                            <Slider Grid.Column="1" x:Name="GSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
+                            <Label Grid.Column="2" x:Name="GValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
+                        </Grid>
 
-            <Border StrokeThickness="1" Stroke="#DDDDDD" StrokeShape="RoundRectangle 12" HeightRequest="180">
-                <Grid x:Name="ColorPreviewGrid" BackgroundColor="#000000">
-                    <Label x:Name="HexLabel"
-                           Text="#000000"
-                           TextColor="White"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center" />
-                </Grid>
+                        <Grid Grid.Row="2" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="10">
+                            <Label Grid.Column="0" Text="B" VerticalOptions="Center" />
+                            <Slider Grid.Column="1" x:Name="BSlider" Minimum="0" Maximum="255" Value="0" ValueChanged="OnSliderValueChanged" />
+                            <Label Grid.Column="2" x:Name="BValueLabel" Text="0" VerticalOptions="Center" WidthRequest="36" HorizontalTextAlignment="End" />
+                        </Grid>
+                    </Grid>
+
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                        <Button Grid.Column="0" Text="Aplicar RGB" Clicked="OnApplyRgbClicked" HorizontalOptions="Fill" />
+                        <Button Grid.Column="1" Text="Aleatorio" Clicked="OnRandomColorClicked" HorizontalOptions="Fill" />
+                    </Grid>
+
+                    <Border StrokeThickness="1" Stroke="#DDDDDD" StrokeShape="RoundRectangle 12" HeightRequest="180">
+                        <Grid x:Name="ColorPreviewGrid" BackgroundColor="#000000">
+                            <Label x:Name="HexLabel"
+                                   Text="#000000"
+                                   TextColor="White"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
+                    <Button Text="Copiar HEX"
+                            Clicked="OnCopyHexClicked"
+                            HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+
             </Border>
-        </VerticalStackLayout>
+
+        </Grid>
     </ScrollView>
 
 </ContentPage>
