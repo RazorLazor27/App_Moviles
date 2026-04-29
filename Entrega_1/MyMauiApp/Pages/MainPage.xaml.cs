@@ -1,4 +1,6 @@
-﻿namespace MyMauiApp;
+﻿using CommunityToolkit.Maui.Behaviors;
+using CommunityToolkit.Maui.Core;
+namespace MyMauiApp;
 
 public partial class MainPage : ContentPage
 {
@@ -88,7 +90,8 @@ public partial class MainPage : ContentPage
 	/// <param name="r"></param>
 	/// <param name="g"></param>
 	/// <param name="b"></param>
-	private void SetColor(int r, int g, int b)
+	/// 
+/*	private void SetColor(int r, int g, int b)
 	{
 		Color color = Color.FromRgb(r, g, b);
 		ColorPreviewGrid.BackgroundColor = color;
@@ -99,4 +102,42 @@ public partial class MainPage : ContentPage
 		int brightness = (r + g + b) / 3;
 		HexLabel.TextColor = brightness >= 128 ? Colors.Black : Colors.White;
 	}
+	*/	
+
+	private void SetColor(int r, int g, int b)
+	{
+		Color color = Color.FromRgb(r, g, b);
+		ColorPreviewGrid.BackgroundColor = color;
+		this.BackgroundColor = color;
+		HexLabel.Text = $"#{r:X2}{g:X2}{b:X2}";
+
+		// --- AQUÍ LA MAGIA DEL STATUS BAR ---
+		if (StatusBar != null)
+		{
+			// Aplicamos el color generado a la barra de estado
+			StatusBar.StatusBarColor = color;
+
+			// Calculamos el brillo para que los iconos (hora, batería) sean legibles
+			// Si el color es claro, ponemos iconos oscuros. Si es oscuro, iconos blancos.
+			double luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+			StatusBar.StatusBarStyle = luminance > 0.5 ? StatusBarStyle.DarkContent : StatusBarStyle.LightContent;
+		}
+
+		if (Shell.Current != null)
+		{
+			double luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+			Shell.SetBackgroundColor(Shell.Current, color);
+
+			Shell.SetTitleColor(
+				Shell.Current,
+				luminance > 0.5 ? Colors.Black : Colors.White
+			);
+		}
+
+	int brightness = (r + g + b) / 3;
+	HexLabel.TextColor = brightness >= 128 ? Colors.Black : Colors.White;
+
+		
+	}	
 }
