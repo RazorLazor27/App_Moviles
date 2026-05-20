@@ -1,0 +1,13 @@
+# Carpetas de salida
+bin/
+obj/
+.vs/
+.idea/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.userosscache
+*.sln.docstates
+
+# Carpetas de publicación
+publish/
