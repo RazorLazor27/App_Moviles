@@ -1,0 +1,3 @@
+# Convención de ramas
+
+Para reducir conflictos de Git, cada integrante debe trabajar desde `main` en ramas cortas y enfocadas por capa: `feature/models/*` para entidades y cálculo puro, `feature/viewmodels/*` para estado reactivo, comandos y reglas de interacción, y `feature/views/*` para XAML y code-behind. Si un cambio toca más de una capa, se usa la rama de la capa dominante y se integra el resto mediante pull requests pequeños y frecuentes; por ejemplo, RazorLazor27 o cualquier miembro del equipo debería poder identificar de inmediato dónde trabajar según si la tarea afecta modelos, ViewModels o vistas

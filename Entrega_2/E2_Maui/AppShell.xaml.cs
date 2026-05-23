@@ -1,9 +1,18 @@
-﻿namespace E2_Maui;
+﻿using E2_Maui.Views;
+
+namespace E2_Maui;
 
 public partial class AppShell : Shell
 {
-	public AppShell()
+	public AppShell(MainPage mainPage)
 	{
 		InitializeComponent();
+
+		Items.Add(new ShellContent
+		{
+			Title = "Calculadora",
+			Route = nameof(MainPage),
+			ContentTemplate = new DataTemplate(() => mainPage)
+		});
 	}
 }

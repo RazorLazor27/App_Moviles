@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="E2_Maui.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Calculadora de propina">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <!-- Ejemplos de bindings para el equipo de UI -->
+            <Entry Placeholder="BillTotal" Keyboard="Numeric" Text="{Binding BillTotal}" />
+            <Entry Placeholder="PeopleCount" Keyboard="Numeric" Text="{Binding PeopleCount}" />
+
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="10%" Command="{Binding UpdateTipCommand}" CommandParameter="10" />
+                <Button Text="15%" Command="{Binding UpdateTipCommand}" CommandParameter="15" />
+                <Button Text="20%" Command="{Binding UpdateTipCommand}" CommandParameter="20" />
+            </HorizontalStackLayout>
+
+            <Slider Minimum="0" Maximum="50" Value="{Binding FreeTipPercentage, Mode=TwoWay}" />
+
+            <Button Text="Recalculate" Command="{Binding RecalculateCommand}" />
+
+            <Label Text="{Binding SubtotalPerPerson, StringFormat='SubtotalPerPerson: {0:C}'}" />
+            <Label Text="{Binding TipPerPerson, StringFormat='TipPerPerson: {0:C}'}" />
+            <Label Text="{Binding TotalPerPerson, StringFormat='TotalPerPerson: {0:C}'}" />
+
+            <!-- La interfaz detallada se construirá después -->
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
