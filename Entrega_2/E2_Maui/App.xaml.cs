@@ -1,16 +1,18 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace E2_Maui;
+﻿namespace E2_Maui;
 
 public partial class App : Application
 {
-	public App()
+	private readonly IServiceProvider _serviceProvider;
+
+	public App(IServiceProvider serviceProvider)
 	{
+		_serviceProvider = serviceProvider;
 		InitializeComponent();
 	}
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
-		return new Window(new AppShell());
+		var appShell = _serviceProvider.GetRequiredService<AppShell>();
+		return new Window(appShell);
 	}
 }
