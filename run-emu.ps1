@@ -1,5 +1,5 @@
 # Script para lanzar el emulador sin abrir Android Studio
-$emulatorPath = "m:\Android_SDK\emulator\emulator.exe"
+$emulatorPath = "E:\SDK_Fast\Android_SDK\emulator\emulator.exe"
 $avdName = "Medium_Phone"
 
 Write-Host "Iniciando emulador: $avdName..." -ForegroundColor Cyan
