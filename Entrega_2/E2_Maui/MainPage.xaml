@@ -35,11 +35,35 @@
                         Text="Numero de personas"
                         Style="{StaticResource SectionLabelStyle}" />
 
-                    <Entry
+                    <Grid ColumnDefinitions="Auto,*,Auto"
+                        ColumnSpacing="10">
+
+                        <!-- Botón menos -->
+                        <Button
+                            Text="-"
+                            Command="{Binding DecreasePeopleCommand}" />
+
+                        <!-- Entrada manual -->
+                        <Entry
+                            Grid.Column="1"
+                            Keyboard="Numeric"
+                            Text="{Binding PeopleCountText}"
+                            Placeholder="1"
+                            HorizontalTextAlignment="Center"
+                            Style="{StaticResource InputEntryStyle}" />
+
+                        <!-- Botón más -->
+                        <Button
+                            Grid.Column="2"
+                            Text="+"
+                            Command="{Binding IncreasePeopleCommand}" />
+
+                    </Grid>
+                    <!-- <Entry
                         Keyboard="Numeric"
                         Text="{Binding PeopleCountText}"
                         Placeholder="1"
-                        Style="{StaticResource InputEntryStyle}" />
+                        Style="{StaticResource InputEntryStyle}" /> /!-->
                 </VerticalStackLayout>
             </Border>
 

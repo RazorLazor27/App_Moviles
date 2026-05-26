@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Dev\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj": {}
+    "C:\\Users\\amsan\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj": {}
   },
   "projects": {
-    "E:\\Dev\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj": {
+    "C:\\Users\\amsan\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dev\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj",
+        "projectUniqueName": "C:\\Users\\amsan\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj",
         "projectName": "E2_Maui",
-        "projectPath": "E:\\Dev\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj",
-        "packagesPath": "C:\\Users\\NicoBeren\\.nuget\\packages\\",
-        "outputPath": "E:\\Dev\\App_Moviles\\Entrega_2\\E2_Maui\\obj\\",
+        "projectPath": "C:\\Users\\amsan\\App_Moviles\\Entrega_2\\E2_Maui\\E2_Maui.csproj",
+        "packagesPath": "C:\\Users\\amsan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amsan\\App_Moviles\\Entrega_2\\E2_Maui\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
-          "C:\\Users\\NicoBeren\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\amsan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0-android",
@@ -28,23 +28,19 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-android": {
-            "framework": "net10.0-android36.0",
+          "net10.0-android36.0": {
             "targetAlias": "net10.0-android",
             "projectReferences": {}
           },
-          "net10.0-ios": {
-            "framework": "net10.0-ios26.5",
+          "net10.0-ios26.2": {
             "targetAlias": "net10.0-ios",
             "projectReferences": {}
           },
-          "net10.0-maccatalyst": {
-            "framework": "net10.0-maccatalyst26.5",
+          "net10.0-maccatalyst26.2": {
             "targetAlias": "net10.0-maccatalyst",
             "projectReferences": {}
           },
-          "net10.0-windows10.0.19041.0": {
-            "framework": "net10.0-windows10.0.19041",
+          "net10.0-windows10.0.19041": {
             "targetAlias": "net10.0-windows10.0.19041.0",
             "projectReferences": {}
           }
@@ -59,11 +55,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net10.0-android": {
-          "framework": "net10.0-android36.0",
+        "net10.0-android36.0": {
           "targetAlias": "net10.0-android",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -81,7 +76,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.8, )",
+              "version": "[10.0.7, )",
               "autoReferenced": true
             }
           },
@@ -107,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -383,8 +378,7 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         },
-        "net10.0-ios": {
-          "framework": "net10.0-ios26.5",
+        "net10.0-ios26.2": {
           "targetAlias": "net10.0-ios",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -402,7 +396,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.8, )",
+              "version": "[10.0.7, )",
               "autoReferenced": true
             }
           },
@@ -428,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -704,8 +698,7 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         },
-        "net10.0-maccatalyst": {
-          "framework": "net10.0-maccatalyst26.5",
+        "net10.0-maccatalyst26.2": {
           "targetAlias": "net10.0-maccatalyst",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -723,7 +716,7 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.8, )",
+              "version": "[10.0.7, )",
               "autoReferenced": true
             }
           },
@@ -750,7 +743,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1026,8 +1019,7 @@
             "System.Xml.XPath.XDocument": "(,5.0.32767]"
           }
         },
-        "net10.0-windows10.0.19041.0": {
-          "framework": "net10.0-windows10.0.19041",
+        "net10.0-windows10.0.19041": {
           "targetAlias": "net10.0-windows10.0.19041.0",
           "dependencies": {
             "CommunityToolkit.Mvvm": {
@@ -1068,7 +1060,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
