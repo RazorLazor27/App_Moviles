@@ -7,6 +7,30 @@ namespace E2_Maui.ViewModels;
 
 public partial class MainViewModel : ObservableObject
 {
+
+    [RelayCommand]
+    private void IncreasePeople()
+    {
+        int people = ParseInt(PeopleCountText);
+
+        people++;
+
+        PeopleCountText = people.ToString();
+    }
+
+    [RelayCommand]
+    private void DecreasePeople()
+    {
+        int people = ParseInt(PeopleCountText);
+
+        if (people > 1)
+        {
+            people--;
+
+            PeopleCountText = people.ToString();
+        }
+    }
+
     [ObservableProperty]
     private string totalConsumptionText = "0";
 
