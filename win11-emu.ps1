@@ -4,6 +4,4 @@ $avdName = "Medium_Phone"
 
 Write-Host "Iniciando emulador: $avdName..." -ForegroundColor Cyan
 
-# El '&' es para ejecutar el comando y '-detachable' permite que el emulador 
-# siga vivo aunque cierres la terminal (dependiendo de la versión del SDK)
 Start-Process $emulatorPath -ArgumentList "-avd", $avdName, "-no-snapshot-load"
