@@ -7,6 +7,17 @@ namespace E2_Maui.ViewModels;
 
 public partial class MainViewModel : ObservableObject
 {
+    public sealed record CurrencyOption(string Label, string CultureName);
+
+    public IReadOnlyList<CurrencyOption> CurrencyOptions { get; } = new List<CurrencyOption>
+    {
+        new("USD - Estados Unidos", "en-US"),
+        new("EUR - Europa", "es-ES"),
+        new("CLP - Chile", "es-CL"),
+        new("ARS - Argentina", "es-AR"),
+        new("PEN - Peru", "es-PE"),
+        new("MXN - Mexico", "es-MX")
+    };
 
     [RelayCommand]
     private void IncreasePeople()
@@ -54,6 +65,9 @@ public partial class MainViewModel : ObservableObject
 
     [ObservableProperty]
     private decimal totalWithTip;
+
+    [ObservableProperty]
+    private string selectedCurrencyCulture = "en-US";
 
     public MainViewModel()
     {

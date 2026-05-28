@@ -2,9 +2,23 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:E2_Maui.ViewModels"
+             xmlns:converters="clr-namespace:E2_Maui.Converters"
              x:Class="E2_Maui.MainPage"
              x:DataType="viewModels:MainViewModel"
              BackgroundColor="{StaticResource PageBackgroundColor}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:CurrencyFormatConverter x:Key="CurrencyFormatConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="..."
+                     Order="Primary"
+                     Priority="0"
+                     Clicked="OnMoreOptionsClicked" />
+    </ContentPage.ToolbarItems>
 
     <ScrollView>
         <VerticalStackLayout
@@ -125,8 +139,14 @@
                             Style="{StaticResource ResultCaptionLabelStyle}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding SubtotalPerPerson, StringFormat='{}{0:C}'}"
-                            Style="{StaticResource ResultValueLabelStyle}" />
+                            Style="{StaticResource ResultValueLabelStyle}">
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource CurrencyFormatConverter}">
+                                    <Binding Path="SubtotalPerPerson" />
+                                    <Binding Path="SelectedCurrencyCulture" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
 
                         <Label
                             Grid.Row="1"
@@ -135,18 +155,30 @@
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
-                            Text="{Binding TipPerPerson, StringFormat='{}{0:C}'}"
-                            Style="{StaticResource ResultValueLabelStyle}" />
+                            Style="{StaticResource ResultValueLabelStyle}">
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource CurrencyFormatConverter}">
+                                    <Binding Path="TipPerPerson" />
+                                    <Binding Path="SelectedCurrencyCulture" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
 
                         <Label
                             Grid.Row="2"
-                            Text="Total"
+                            Text="Total p/persona"
                             Style="{StaticResource ResultCaptionLabelStyle}" />
                         <Label
                             Grid.Row="2"
                             Grid.Column="1"
-                            Text="{Binding TotalPerPerson, StringFormat='{}{0:C}'}"
-                            Style="{StaticResource ResultValueLabelStyle}" />
+                            Style="{StaticResource ResultValueLabelStyle}">
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource CurrencyFormatConverter}">
+                                    <Binding Path="TotalPerPerson" />
+                                    <Binding Path="SelectedCurrencyCulture" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
                     </Grid>
 
                     <Grid
@@ -158,8 +190,14 @@
                             Style="{StaticResource ResultCaptionLabelStyle}" />
                         <Label
                             Grid.Column="1"
-                            Text="{Binding TipAmountTotal, StringFormat='{}{0:C}'}"
-                            Style="{StaticResource ResultValueLabelStyle}" />
+                            Style="{StaticResource ResultValueLabelStyle}">
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource CurrencyFormatConverter}">
+                                    <Binding Path="TipAmountTotal" />
+                                    <Binding Path="SelectedCurrencyCulture" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
 
                         <Label
                             Grid.Row="1"
@@ -168,8 +206,14 @@
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
-                            Text="{Binding TotalWithTip, StringFormat='{}{0:C}'}"
-                            Style="{StaticResource ResultValueLabelStyle}" />
+                            Style="{StaticResource ResultValueLabelStyle}">
+                            <Label.Text>
+                                <MultiBinding Converter="{StaticResource CurrencyFormatConverter}">
+                                    <Binding Path="TotalWithTip" />
+                                    <Binding Path="SelectedCurrencyCulture" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
                     </Grid>
                 </VerticalStackLayout>
             </Border>
