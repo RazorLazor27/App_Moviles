@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersonalExpenses</name>
+    </assembly>
+    <members>
+        <member name="T:PersonalExpenses.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.DescriptionInput">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._descriptionInput"/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.AmountInput">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._amountInput"/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.IsExpense">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._isExpense"/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.TotalBalance">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._totalBalance"/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.TotalIncome">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._totalIncome"/>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.TotalExpense">
+            <inheritdoc cref="F:PersonalExpenses.ViewModels.MainViewModel._totalExpense"/>
+        </member>
+        <member name="F:PersonalExpenses.ViewModels.MainViewModel.loadTransactionsCommand">
+            <summary>The backing field for <see cref="P:PersonalExpenses.ViewModels.MainViewModel.LoadTransactionsCommand"/>.</summary>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.LoadTransactionsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PersonalExpenses.ViewModels.MainViewModel.LoadTransactionsAsync"/>.</summary>
+        </member>
+        <member name="F:PersonalExpenses.ViewModels.MainViewModel.addTransactionCommand">
+            <summary>The backing field for <see cref="P:PersonalExpenses.ViewModels.MainViewModel.AddTransactionCommand"/>.</summary>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.AddTransactionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:PersonalExpenses.ViewModels.MainViewModel.AddTransactionAsync"/>.</summary>
+        </member>
+        <member name="F:PersonalExpenses.ViewModels.MainViewModel.setTypeCommand">
+            <summary>The backing field for <see cref="P:PersonalExpenses.ViewModels.MainViewModel.SetTypeCommand"/>.</summary>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.SetTypeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:PersonalExpenses.ViewModels.MainViewModel.SetType(System.String)"/>.</summary>
+        </member>
+        <member name="F:PersonalExpenses.ViewModels.MainViewModel.deleteTransactionCommand">
+            <summary>The backing field for <see cref="P:PersonalExpenses.ViewModels.MainViewModel.DeleteTransactionCommand"/>.</summary>
+        </member>
+        <member name="P:PersonalExpenses.ViewModels.MainViewModel.DeleteTransactionCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:PersonalExpenses.ViewModels.MainViewModel.DeleteTransactionAsync(PersonalExpenses.Models.Transaction)"/>.</summary>
+        </member>
+        <member name="T:PersonalExpenses.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DescriptionInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DescriptionInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AmountInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AmountInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsExpense">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsExpense" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalIncome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalIncome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalExpense">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalExpense" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DescriptionInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DescriptionInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AmountInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AmountInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsExpense">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsExpense" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalIncome">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalIncome" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalExpense">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalExpense" generated properties.</summary>
+        </member>
+    </members>
+</doc>
