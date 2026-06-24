@@ -22,13 +22,13 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 		#endif
 
-		// Register Services
+		
 		builder.Services.AddSingleton<DatabaseService>();
 
-		// Register ViewModels
+		
 		builder.Services.AddTransient<MainViewModel>();
 
-		// Register Views
+		
 		builder.Services.AddTransient<MainPage>();
 
 		return builder.Build();

@@ -271,7 +271,7 @@
                                     HeightRequest="36"
                                     WidthRequest="36"
                                     CornerRadius="18"
-                                    Command="{Binding BindingContext.DeleteTransactionCommand, Source={RelativeSource AncestorType={x:Type vm:MainViewModel}}}"
+                                    Command="{Binding BindingContext.DeleteTransactionCommand, Source={RelativeSource AncestorType={x:Type ContentPage}}}"
                                     CommandParameter="{Binding .}" />
 
                         </Grid>

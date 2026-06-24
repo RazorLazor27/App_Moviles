@@ -1,4 +1,4 @@
-<api type="debug" assembly-name="PersonalExpenses" mvid="d9e98f8fa7a04f1c938e6625f50011a8">
+<api type="debug" assembly-name="PersonalExpenses" mvid="bed4c06a1e6a4df6ad6ca1ca7f9df14d">
   <java-to-managed>
     <entry java-name="crc64727963942824ee30/MainActivity" managed-name="PersonalExpenses.MainActivity, PersonalExpenses" managed-type-token-id="33554442" />
     <entry java-name="crc64727963942824ee30/MainApplication" managed-name="PersonalExpenses.MainApplication, PersonalExpenses" managed-type-token-id="33554443" />
